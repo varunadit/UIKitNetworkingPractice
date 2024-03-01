@@ -16,6 +16,11 @@
 		1843FCF92B4D99A100368021 /* UIKitNetworkingPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FCF82B4D99A100368021 /* UIKitNetworkingPracticeTests.swift */; };
 		1843FD032B4D99A100368021 /* UIKitNetworkingPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FD022B4D99A100368021 /* UIKitNetworkingPracticeUITests.swift */; };
 		1843FD052B4D99A100368021 /* UIKitNetworkingPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FD042B4D99A100368021 /* UIKitNetworkingPracticeUITestsLaunchTests.swift */; };
+		1843FD162B4E42CA00368021 /* UIKNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FD152B4E42CA00368021 /* UIKNetworkManager.swift */; };
+		1843FD192B4E43D200368021 /* MarketsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FD182B4E43D200368021 /* MarketsResponseModel.swift */; };
+		1843FD1B2B4E473700368021 /* UIKAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FD1A2B4E473700368021 /* UIKAPIManager.swift */; };
+		1843FD1D2B4E4AC600368021 /* ViewControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FD1C2B4E4AC600368021 /* ViewControllerVM.swift */; };
+		1843FD212B4E505900368021 /* LabeledTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843FD202B4E505900368021 /* LabeledTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		1843FCFE2B4D99A100368021 /* UIKitNetworkingPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitNetworkingPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1843FD022B4D99A100368021 /* UIKitNetworkingPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitNetworkingPracticeUITests.swift; sourceTree = "<group>"; };
 		1843FD042B4D99A100368021 /* UIKitNetworkingPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitNetworkingPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1843FD152B4E42CA00368021 /* UIKNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKNetworkManager.swift; sourceTree = "<group>"; };
+		1843FD182B4E43D200368021 /* MarketsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsResponseModel.swift; sourceTree = "<group>"; };
+		1843FD1A2B4E473700368021 /* UIKAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKAPIManager.swift; sourceTree = "<group>"; };
+		1843FD1C2B4E4AC600368021 /* ViewControllerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVM.swift; sourceTree = "<group>"; };
+		1843FD202B4E505900368021 /* LabeledTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +111,9 @@
 			children = (
 				1843FCE12B4D999E00368021 /* AppDelegate.swift */,
 				1843FCE32B4D999E00368021 /* SceneDelegate.swift */,
-				1843FCE52B4D999E00368021 /* ViewController.swift */,
+				1843FD172B4E43BB00368021 /* Models */,
+				1843FD142B4E42AC00368021 /* Utilities */,
+				1843FD112B4E428400368021 /* HomeView */,
 				1843FCE72B4D999E00368021 /* Main.storyboard */,
 				1843FCEA2B4D99A100368021 /* Assets.xcassets */,
 				1843FCEC2B4D99A100368021 /* LaunchScreen.storyboard */,
@@ -125,6 +137,49 @@
 				1843FD042B4D99A100368021 /* UIKitNetworkingPracticeUITestsLaunchTests.swift */,
 			);
 			path = UIKitNetworkingPracticeUITests;
+			sourceTree = "<group>";
+		};
+		1843FD112B4E428400368021 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				1843FD132B4E429900368021 /* ViewModel */,
+				1843FD122B4E428E00368021 /* View */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		1843FD122B4E428E00368021 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1843FCE52B4D999E00368021 /* ViewController.swift */,
+				1843FD202B4E505900368021 /* LabeledTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1843FD132B4E429900368021 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1843FD1C2B4E4AC600368021 /* ViewControllerVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1843FD142B4E42AC00368021 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1843FD152B4E42CA00368021 /* UIKNetworkManager.swift */,
+				1843FD1A2B4E473700368021 /* UIKAPIManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1843FD172B4E43BB00368021 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1843FD182B4E43D200368021 /* MarketsResponseModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1843FD1B2B4E473700368021 /* UIKAPIManager.swift in Sources */,
+				1843FD162B4E42CA00368021 /* UIKNetworkManager.swift in Sources */,
+				1843FD212B4E505900368021 /* LabeledTableCell.swift in Sources */,
 				1843FCE62B4D999E00368021 /* ViewController.swift in Sources */,
 				1843FCE22B4D999E00368021 /* AppDelegate.swift in Sources */,
 				1843FCE42B4D999E00368021 /* SceneDelegate.swift in Sources */,
+				1843FD192B4E43D200368021 /* MarketsResponseModel.swift in Sources */,
+				1843FD1D2B4E4AC600368021 /* ViewControllerVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
